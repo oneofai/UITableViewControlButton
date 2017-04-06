@@ -53,17 +53,17 @@
     
     //判断滑动到底部
     if (scrollView.contentOffset.y == scrollView.contentSize.height - self.tableView.frame.size.height) {
-        [UIView transitionWithView:self.bottomButton duration:0.1 options:UIViewAnimationOptionTransitionNone animations:^{
+        [UIView transitionWithView:self.bottomButton duration:0.5 options: UIViewAnimationOptionTransitionNone animations:^{
             self.bottomButton.frame = CGRectMake(SCREEN.width / 2 - 25, SCREEN.height - 50, 50, 50);
         } completion:NULL];
     }
     
     if (scrollView.contentOffset.y > self.offsetY && scrollView.contentOffset.y > 0) {//如果当前位移大于缓存位移，说明scrollView向上滑动
-        [UIView transitionWithView:self.bottomButton duration:0.1 options:UIViewAnimationOptionTransitionNone animations:^{
+        [UIView transitionWithView:self.bottomButton duration:0.5 options: UIViewAnimationOptionTransitionNone animations:^{
             self.bottomButton.frame = CGRectMake(SCREEN.width / 2 - 25, SCREEN.height, 50, 50);
         } completion:NULL];
     }else if (scrollView.contentOffset.y < self.offsetY){
-        [UIView transitionWithView:self.bottomButton duration:0.1 options:UIViewAnimationOptionTransitionNone animations:^{
+        [UIView transitionWithView:self.bottomButton duration:0.5 options: UIViewAnimationOptionTransitionNone animations:^{
             self.bottomButton.frame = CGRectMake(SCREEN.width / 2 - 25, SCREEN.height - 50, 50, 50);
         } completion:NULL];
     }
